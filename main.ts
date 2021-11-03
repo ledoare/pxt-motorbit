@@ -77,19 +77,33 @@ export enum SonarVersion {
 }
 
 export enum Turns {
-    //% blockId="T1B4" block="1/4"
+    //% blockId="T1B4"
+ 
+ //% block="1/4"
     T1B4 = 90,
-    //% blockId="T1B2" block="1/2"
+    //% blockId="T1B2"
+ 
+ //% block="1/2"
     T1B2 = 180,
-    //% blockId="T1B0" block="1"
+    //% blockId="T1B0"
+ 
+ //% block="1"
     T1B0 = 360,
-    //% blockId="T2B0" block="2"
+    //% blockId="T2B0"
+ 
+ //% block="2"
     T2B0 = 720,
-    //% blockId="T3B0" block="3"
+    //% blockId="T3B0"
+ 
+ //% block="3"
     T3B0 = 1080,
-    //% blockId="T4B0" block="4"
+    //% blockId="T4B0"
+ 
+ //% block="4"
     T4B0 = 1440,
-    //% blockId="T5B0" block="5"
+    //% blockId="T5B0"
+ 
+ //% block="5"
     T5B0 = 1800
 }
 
@@ -196,7 +210,8 @@ function stopMotor(index: number) {
  * @param index Servo Channel; eg: S1
  * @param degree [0-180] degree of servo; eg: 0, 90, 180
 */
-//% blockId=motorbit_servo block="Servo|%index|degree %degree=protractorPicker"
+//% blockId=motorbit_servo
+//% block="Servo|%index|degree %degree=protractorPicker"
 //% weight=100
 //% degree.defl=90
 //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -215,7 +230,8 @@ export function Servo(index: Servos, degree: number): void {
  * @param index Servo Channel; eg: S1
  * @param degree [-45-225] degree of servo; eg: -45, 90, 225
 */
-//% blockId=motorbit_gservo block="Geek Servo|%index|degree %degree=protractorPicker"
+//% blockId=motorbit_gservo
+//% block="Geek Servo|%index|degree %degree=protractorPicker"
 //% weight=98
 //% blockGap=50
 //% degree.defl=90
@@ -237,7 +253,8 @@ export function GeekServo(index: Servos, degree: number): void {
  * @param degree2 [0-180] degree of servo; eg: 0, 90, 180
  * @param speed [1-10] speed of servo; eg: 1, 10
 */
-//% blockId=motorbit_servospeed block="Servo|%index|degree start %degree1|end %degree2|speed %speed"
+//% blockId=motorbit_servospeed
+//% block="Servo|%index|degree start %degree1|end %degree2|speed %speed"
 //% weight=96
 //% degree1.min=0 degree1.max=180
 //% degree2.min=0 degree2.max=180
@@ -268,7 +285,8 @@ export function Servospeed(index: Servos, degree1: number, degree2: number, spee
 }
 
 
-//% blockId=motorbit_stepper_degree block="Stepper 28BYJ-48|%index|degree %degree"
+//% blockId=motorbit_stepper_degree
+//% block="Stepper 28BYJ-48|%index|degree %degree"
 //% weight=91
 export function StepperDegree(index: Steppers, degree: number): void {
     if (!initialized) {
@@ -281,14 +299,16 @@ export function StepperDegree(index: Steppers, degree: number): void {
 }
 
 
-//% blockId=motorbit_stepper_turn block="Stepper 28BYJ-48|%index|turn %turn"
+//% blockId=motorbit_stepper_turn
+//% block="Stepper 28BYJ-48|%index|turn %turn"
 //% weight=90
 export function StepperTurn(index: Steppers, turn: Turns): void {
     let degree = turn;
     StepperDegree(index, degree);
 }
 
-//% blockId=motorbit_stepper_dual block="Dual Stepper(Degree) |STPM1_2 %degree1| STPM3_4 %degree2"
+//% blockId=motorbit_stepper_dual
+//% block="Dual Stepper(Degree) |STPM1_2 %degree1| STPM3_4 %degree2"
 //% weight=89
 export function StepperDual(degree1: number, degree2: number): void {
     if (!initialized) {
@@ -315,7 +335,8 @@ export function StepperDual(degree1: number, degree2: number): void {
  * @param distance Distance to move in cm; eg: 10, 20
  * @param diameter diameter of wheel in mm; eg: 48
 */
-//% blockId=motorbit_stpcar_move block="Car Forward|Distance(cm) %distance|Wheel Diameter(mm) %diameter"
+//% blockId=motorbit_stpcar_move
+//% block="Car Forward|Distance(cm) %distance|Wheel Diameter(mm) %diameter"
 //% weight=88
 export function StpCarMove(distance: number, diameter: number): void {
     if (!initialized) {
@@ -335,7 +356,8 @@ export function StpCarMove(distance: number, diameter: number): void {
  * @param diameter diameter of wheel in mm; eg: 48
  * @param track track width of car; eg: 125
 */
-//% blockId=motorbit_stpcar_turn block="Car Turn|Degree %turn|Wheel Diameter(mm) %diameter|Track(mm) %track"
+//% blockId=motorbit_stpcar_turn
+//% block="Car Turn|Degree %turn|Wheel Diameter(mm) %diameter|Track(mm) %track"
 //% weight=87
 //% blockGap=50
 export function StpCarTurn(turn: number, diameter: number, track: number): void {
@@ -352,7 +374,8 @@ export function StpCarTurn(turn: number, diameter: number, track: number): void 
 
 
 
-//% blockId=motorbit_stop_all block="Motor Stop All"
+//% blockId=motorbit_stop_all
+//% block="Motor Stop All"
 //% weight=85
 //% blockGap=50
 export function MotorStopAll(): void {
@@ -364,13 +387,15 @@ export function MotorStopAll(): void {
     }
 }
 
-//% blockId=motorbit_stop block="Motor Stop|%index|"
+//% blockId=motorbit_stop
+//% block="Motor Stop|%index|"
 //% weight=84
 export function MotorStop(index: Motors): void {
     MotorRun(index, 0);
 }
 
-//% blockId=motorbit_motor_run block="Motor|%index|speed %speed"
+//% blockId=motorbit_motor_run
+//% block="Motor|%index|speed %speed"
 //% weight=82
 //% speed.min=-255 speed.max=255
 //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -404,7 +429,8 @@ export function MotorRun(index: Motors, speed: number): void {
  * @param speed [-255-255] speed of motor; eg: 150, -150
  * @param delay seconde delay to stop; eg: 1
 */
-//% blockId=motorbit_motor_rundelay block="Motor|%index|speed %speed|delay %delay|s"
+//% blockId=motorbit_motor_rundelay
+//% block="Motor|%index|speed %speed|delay %delay|s"
 //% weight=81
 //% speed.min=-255 speed.max=255
 //% name.fieldEditor="gridpicker" name.fieldOptions.columns=4
@@ -423,7 +449,8 @@ export function MotorRunDelay(index: Motors, speed: number, delay: number): void
  * @param motor2 Second Motor; eg: A03A04, B03B04
  * @param speed2 [-255-255] speed of motor; eg: 150, -150
 */
-//% blockId=motorbit_motor_dual block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
+//% blockId=motorbit_motor_dual
+//% block="Motor|%motor1|speed %speed1|%motor2|speed %speed2"
 //% weight=80
 //% inlineInputMode=inline
 //% speed1.min=-255 speed1.max=255
@@ -442,7 +469,8 @@ export function MotorRunDual(motor1: Motors, speed1: number, motor2: Motors, spe
  * @param motor2 Second Motor; eg: A03A04, B03B04
  * @param speed2 [-255-255] speed of motor; eg: 150, -150
 */
-//% blockId=motorbit_motor_dualDelay block="Motor|%motor1|speed %speed1|%motor2|speed %speed2|delay %delay|s "
+//% blockId=motorbit_motor_dualDelay
+//% block="Motor|%motor1|speed %speed1|%motor2|speed %speed2|delay %delay|s "
 //% weight=79
 //% inlineInputMode=inline
 //% speed1.min=-255 speed1.max=255
@@ -456,13 +484,15 @@ export function MotorRunDualDelay(motor1: Motors, speed1: number, motor2: Motors
     MotorRun(motor2, 0);
     }
 
-//% blockId="motorbit_rus04" block="On-board Ultrasonic part %index show color %rgb effect %effect" 
+//% blockId="motorbit_rus04"
+//% block="On-board Ultrasonic part %index show color %rgb effect %effect" 
 //% weight=78
 export function motorbit_rus04(index: RgbUltrasonics, rgb: RgbColors, effect: ColorEffect): void {
     sensors.board_rus04_rgb(DigitalPin.P16, 4, index, rgb, effect);
 }
     
-//% blockId=Ultrasonic_reading_distance block="On-board Ultrasonic reading distance"
+//% blockId=Ultrasonic_reading_distance
+//% block="On-board Ultrasonic reading distance"
 //% weight=77
 
 export function Ultrasonic_reading_distance(): number {
@@ -470,19 +500,22 @@ export function Ultrasonic_reading_distance(): number {
 }
 
 
-//% blockId=Setting_the_on_board_lights block="Setting the on-board lights %index color %rgb Effect %effect"
+//% blockId=Setting_the_on_board_lights
+//% block="Setting the on-board lights %index color %rgb Effect %effect"
 //% weight=76
 export function Setting_the_on_board_lights(offset: Offset,rgb: RgbColors, effect: rgb_ColorEffect): void {
  sensors.board_rus04_rgb(DigitalPin.P16, offset, 0, rgb, effect);
 }
 	
-//% blockId=close_the_on_board_lights block="close the on-board lights %index color"
+//% blockId=close_the_on_board_lights
+//% block="close the on-board lights %index color"
 //% weight=75
 export function close_the_on_board_lights(offset: Offset): void {
  sensors.board_rus04_rgb(DigitalPin.P16, offset, 0, RgbColors.Black, rgb_ColorEffect.None);
 }
 	
-//% blockId=close_all_the_on_board_lights block="close all the on-board lights"
+//% blockId=close_all_the_on_board_lights
+//% block="close all the on-board lights"
 //% weight=74
 export function close_all_the_on_board_lights(): void {
  sensors.board_rus04_rgb(DigitalPin.P16, 0, 0, RgbColors.Black, rgb_ColorEffect.None);
