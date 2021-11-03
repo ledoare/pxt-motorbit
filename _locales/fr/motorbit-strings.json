@@ -1,5 +1,5 @@
 {
-    "motorbit|block": "MotorBit",
+    "motorbit|block": "MotorBit v1",
     "motorbit_servo|block": "Geek Servo|%index|degrée|%degree=protractorPicker",
     "motorbit_gservo|block": "Servo|%index|degrée %degree=protractorPicker",
     "motorbit_servospeed|block": "Servo|%index|début |%degree1|end|%degree2|vitesse|%speed",
