@@ -23,4 +23,17 @@
     "motorbit.motorbit_rus04|block": "Capteur ultrasons : | %index couleur LED | %rgb effet | %effect",
     "motorbit.close_the_on_board_lights|block": "Eteindre LED rvb | %offset ",
     "motorbit.close_all_the_on_board_lights|block": "Eteindre toutes les LED rvb"
+    "RgbColors.Red|block": "rouge",
+    "RgbColors.Orange|block": "orange",
+    "RgbColors.Yellow|block": "jaune",
+    "RgbColors.Green|block": "vert",
+    "RgbColors.Blue|block": "bleu",
+    "RgbColors.Indigo|block": "indigo",
+    "RgbColors.Violet|block": "violet",
+    "RgbColors.Purple|block": "mauve",
+    "RgbColors.White|block": "blanc",
+    "RgbColors.Black|block": "noir",
+    "RgbUltrasonics.Left|block": "gauche",
+    "RgbUltrasonics.Right|block": "droite",
+    "RgbUltrasonics.All|block": "tous"
 }
