@@ -2,8 +2,8 @@
     "motorbit|block": "MotorBit",
     "motorbit.Servo|block": "Servo|%index|rotation %degree=protractorPicker",
     "motorbit.Gservo|block": "GeekServo|%index|rotation %degree=protractorPicker",
-    "motorbit.Servospeed|block": "Servo|%index|rotation de %degree1|degrés à %degree2|degrés vitesse %speed",
-    "motorbit.Stepper_degree|block": "Moteur stepper|%index|rotation %degree",
+    "motorbit.ServoSpeed|block": "Servo|%index|rotation de %degree1|degrés à %degree2|degrés vitesse %speed",
+    "motorbit.StepperDegree|block": "Moteur stepper|%index|rotation %degree",
     "motorbit.StepperTurn|block": "Moteur stepper|%index|rotation %turn",
     "motorbit.StepperDual|block": "2 Moteurs stepper (degrés) STPM1_2 | %degree1  STPM3_4 | %degree2",
     "motorbit.StpCarMove|block": "Distance à parcourir(cm) | %distance diamètre roues(mm) | %diameter",
@@ -20,7 +20,7 @@
     "Offset.FOUR|block": "第四个灯",
     "motorbit.Ultrasonic_reading_distance|block": "Capteur ultrasons : Distance",
     "motorbit.Setting_the_on_board_lights|block": "LED rvb | %offset couleur | %rgb effet | %effect",
-    "motorbit.rus04|block": "Capteur ultrasons : | %index couleur LED | %rgb effet | %effect",
+    "motorbit.motorbit_rus04|block": "Capteur ultrasons : | %index couleur LED | %rgb effet | %effect",
     "motorbit.close_the_on_board_lights|block": "Eteindre LED rvb | %offset ",
     "motorbit.close_all_the_on_board_lights|block": "Eteindre toutes les LED rvb"
 }
