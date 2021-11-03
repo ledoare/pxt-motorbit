@@ -1,6 +1,6 @@
 {
     "name": "motorbit",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "description": "motorbit emakefun",
     "dependencies": {
         "core": "*",
