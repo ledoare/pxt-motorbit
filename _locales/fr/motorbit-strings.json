@@ -1,8 +1,8 @@
 {
     "motorbit|block": "MotorBit v1",
-    "motorbit_servo|block": "Geek Servo|%index|degrée|%degree=protractorPicker",
-    "motorbit_gservo|block": "Servo|%index|degrée %degree=protractorPicker",
-    "motorbit_servospeed|block": "Servo|%index|début |%degree1|end|%degree2|vitesse|%speed",
+    "motorbit.servo|block": "Geek Servo|%index|degrée|%degree=protractorPicker",
+    "motorbit.gservo|block": "Servo|%index|degrée %degree=protractorPicker",
+    "motorbit.servospeed|block": "Servo|%index|début |%degree1|end|%degree2|vitesse|%speed",
     "motorbit.StepperDegree|block": "Moteur stepper|%index|degrée %degree",
     "motorbit.StepperTurn|block": "Moteur stepper|%index|tour %turn",
     "motorbit.StepperDual|block": "2 Moteurs stepper (degrée)|STPM1_2 %degree1| STPM3_4 %degree2",
